@@ -16,7 +16,6 @@ public class LoginController {
 	
 	@RequestMapping("")
 	public String login() {
-        System.out.println("login");
 		return "login";
 	}
 	
@@ -30,15 +29,23 @@ public class LoginController {
         
         if(user.getUserNo() == null) {
             System.out.println("login1");
+            request.setAttribute("login_msg", "用户不存在!");
         	return "forward:/login/";
         }
         else if(!user.getPassword().equals(password)) {
             System.out.println(String.format("login2:%s != %s", user.getPassword(), password));
-        	return "forward:/login/";
+        	request.setAttribute("login_msg", "密码错误!");
+            return "forward:/login/";
         }
         else {
     		return "redirect:/greet/";
         }
 	}
+	
+	@RequestMapping("logout")
+    public String loginOut(HttpServletRequest request,HttpServletResponse response){
+        request.getSession().removeAttribute("user");
+        return "redirect:/login/login";
+    }
  
 }
