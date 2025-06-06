@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class GetMySQLConnection {
 	private static String driverName = "com.mysql.cj.jdbc.Driver";
-    private static String dbURL = "jdbc:mysql://localhost:3306/banksys?allowPublicKeyRetrieval=true&useSSL=false";
+    private static String dbURL = "jdbc:mysql://localhost:3306/bank_database?allowPublicKeyRetrieval=true&useSSL=false";
     private static String userName = "root";
     private static String userPwd = "123456";
     
@@ -14,7 +14,7 @@ public class GetMySQLConnection {
         try {
             Class.forName(driverName);
             return DriverManager.getConnection(dbURL, userName, userPwd);
-        } catch (ClassNotFoundException e) {
+        }catch (ClassNotFoundException e) {
             e.printStackTrace();
             return null;
         }catch (SQLException e){

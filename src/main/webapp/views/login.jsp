@@ -19,8 +19,8 @@
             <option value="admin">管理员</option>
         </select>
         
-        <input type="text" id="inputEmail" name="user_code" placeholder="用户ID" required autofocus>
-        <label for="inputEmail">用户编号</label>
+        <input type="text" id="inputEmail" name="user_no" placeholder="用户NO" required autofocus>
+        <label for="inputNo">用户编号</label>
         
         <input type="password" id="inputPassword"  name="password" placeholder="密码" required>
         <label for="inputPassword">密码</label>

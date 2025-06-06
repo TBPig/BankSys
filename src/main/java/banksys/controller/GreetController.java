@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("greet")
 public class GreetController {
-	@RequestMapping("greet")
+	@RequestMapping("")
 	public String greet() {
         System.out.println("greet");
-		return "login";
+		return "greet";
 	}
 }
