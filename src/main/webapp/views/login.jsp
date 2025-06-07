@@ -16,17 +16,17 @@
     <div class="login-container">
         <form action="/BankSys/login/doLogin" method="post" class="login-form" id="loginForm" novalidate>
             <h1 class="login-title">银行账户登录</h1>
-            <p class="subtitle">请选择用户类型并输入信息</p>
+            <!-- <p class="subtitle">请选择用户类型并输入信息</p>
             <div class="form-group">
                 <label for="user_type">用户类型:</label>
                 <select id="user_type" name="user_type">
                     <option value="client">客户</option>
                     <option value="admin">管理员</option>
                 </select>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="inputEmail">用户编号</label>
-                <input type="text" id="inputEmail" name="user_code" placeholder="用户ID" required autofocus>
+                <input type="text" id="inputNo" name="user_no" placeholder="用户ID" required autofocus>
                 <div class="input-feedback" id="userCodeFeedback"></div>
             </div>
             <div class="form-group">
