@@ -35,6 +35,6 @@
         </table>
     </form>
     
-    <a href="../login/">返回登录</a>
+    <a href="../login/index">返回登录</a>
 </body>
 </html>

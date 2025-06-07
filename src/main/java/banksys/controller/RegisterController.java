@@ -13,7 +13,7 @@ import banksys.dao.UserDao;
 @RequestMapping("register")
 public class RegisterController {
 	
-	@RequestMapping("")
+	@RequestMapping("index")
 	public String register() {
 		return "register";
 	}
@@ -26,6 +26,6 @@ public class RegisterController {
 			@RequestParam("owner_id_card") String owner_id_card) {
 	UserDao.addUser(user_no, 1, name, password, owner_id_card);	
     System.out.println("register");
-	return "redirect:/login/";
+	return "redirect:/login/index";
 	}
 }

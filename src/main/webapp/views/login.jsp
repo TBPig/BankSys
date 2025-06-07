@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form action="/BankSys/login/doLogin" method="post">
-		<h1>给爷登录你的银行账户</h1>
+		<h1>给爷登录</h1>
 		
         <p>你什么用户类型:</p>  
         <div><select id="user_type" name="user_type">
@@ -30,7 +30,7 @@
         <button  type="submit">登录</button>
         
         
-    <a href="../register/" class="btn btn-lg btn-primary btn-block">前往注册</a>
+    <a href="../register/index" class="btn btn-lg btn-primary btn-block">前往注册</a>
         
 	</form>
 </body>

@@ -14,7 +14,7 @@ import banksys.model.User;
 @RequestMapping("login")
 public class LoginController {
 	
-	@RequestMapping("")
+	@RequestMapping("index")
 	public String login() {
 		return "login";
 	}
@@ -30,15 +30,16 @@ public class LoginController {
         if(user.getUserNo() == null) {
             System.out.println("login1");
             request.setAttribute("login_msg", "用户不存在!");
-        	return "forward:/login/";
+        	return "forward:/login/index";
         }
         else if(!user.getPassword().equals(password)) {
             System.out.println(String.format("login2:%s != %s", user.getPassword(), password));
         	request.setAttribute("login_msg", "密码错误!");
-            return "forward:/login/";
+            return "forward:/login/index";
         }
         else {
-    		return "redirect:/greet/";
+        	request.getSession().setAttribute("user", user);
+    		return "redirect:/user/greet";
         }
 	}
 	
