@@ -27,7 +27,12 @@ public class AccountDao {
         String sql = String.format("select * from account where account_no='%s'", account_no);
 		return getInfo(sql);
 	}
-
+    
+    public static void setBalance(String account_no, int balance) {
+		String sql = String.format("UPDATE account SET balance = %d WHERE account_no = '%s'", balance, account_no);
+		setInfo(sql);
+	}
+    
     private static void setInfo(String sql) {
         Connection con = GetMySQLConnection.getConnection();
         try {

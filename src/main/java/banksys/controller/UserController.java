@@ -42,7 +42,6 @@ public class UserController {
         if (user == null) return "redirect:/login/index";
         
 		Account account= AccountDao.getAccount(account_no);
-		System.out.println(account);
 		if (account.getAccountNo() == null) {
 			System.out.println("addAccount");
 	        AccountDao.addAccount(account_no, 1, user.getUserNo(), 0, "admin01");

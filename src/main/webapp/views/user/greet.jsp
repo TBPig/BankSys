@@ -45,6 +45,14 @@
     <div>
     <a href="tryAddAccount">创建账户</a>
     </div>
+    
+    <div>
+    <a href="../account/save">存款</a>
+    </div>
+    
+    <div>
+    <a href="../account/draw">取款</a>
+    </div>
 </body>
 
 
