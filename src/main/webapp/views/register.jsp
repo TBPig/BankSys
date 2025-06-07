@@ -33,6 +33,7 @@
                 <td colspan="2"><br><input type="submit" value="提交"></td>
             </tr>
         </table>
+    	<div id = "errorMsg"> ${register_msg} </div>
     </form>
     
     <a href="../login/index">返回登录</a>

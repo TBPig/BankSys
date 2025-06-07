@@ -46,7 +46,7 @@ public class LoginController {
 	@RequestMapping("logout")
     public String loginOut(HttpServletRequest request,HttpServletResponse response){
         request.getSession().removeAttribute("user");
-        return "redirect:/login/login";
+        return "redirect:/login/index";
     }
  
 }

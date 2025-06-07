@@ -50,7 +50,7 @@ public class Account {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Account{" +
                 "account_no='" + account_no + '\'' +
                 ", status=" + status +
                 ", opener_id='" + opener_id + '\'' +

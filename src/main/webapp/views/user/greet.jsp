@@ -12,6 +12,10 @@
     <title>欢迎登录</title>
 </head>
 <body>
+	<div>
+    <a href="../login/logout">退出登录</a>
+    </div>
+    
     <div>
         <h1 id="welcome-message"></h1>
         <p>${user.name},欢迎光临！</p>

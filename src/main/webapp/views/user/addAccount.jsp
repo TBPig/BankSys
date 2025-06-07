@@ -12,6 +12,7 @@
 
 <body>
 	<h2>账户注册表单</h2>
+    <div id = "errorMsg"> ${add_account_msg} </div>
 	<form action="/BankSys/user/addAccount" method="post">
 		<table>
             <tr>

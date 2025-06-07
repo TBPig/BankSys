@@ -22,6 +22,11 @@ public class AccountDao {
         String sql = String.format("select * from account where opener_id='%s'", user_no);
         return getInfoList(sql);
     }
+    
+    public static Account getAccount(String account_no) {
+        String sql = String.format("select * from account where account_no='%s'", account_no);
+		return getInfo(sql);
+	}
 
     private static void setInfo(String sql) {
         Connection con = GetMySQLConnection.getConnection();
@@ -34,7 +39,6 @@ public class AccountDao {
         GetMySQLConnection.closeConnection(con);
     }
 
-    @SuppressWarnings("unused")
 	private static Account getInfo(String sql) {
         Account account = new Account();
         Connection con = GetMySQLConnection.getConnection();
